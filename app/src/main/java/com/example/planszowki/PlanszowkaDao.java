@@ -1,5 +1,6 @@
 package com.example.planszowki;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -15,11 +16,11 @@ public interface PlanszowkaDao {
     void wstawListePlanszowek(List<Planszowka> gry);
 
     @Query("SELECT * FROM planszowki")
-    List<Planszowka> wszystkiePlanszowki();
+    LiveData<List<Planszowka>> wszystkiePlanszowki();
 
     @Query("SELECT * FROM planszowki WHERE wiek<=:w")
-    List<Planszowka> planszowkiWgWieku(int w);
+    LiveData<List<Planszowka>> planszowkiWgWieku(int w);
 
     @Query("SELECT * FROM planszowki WHERE minLiczbaOsob<=:l AND maxLiczbaOsob>=:l")
-    List<Planszowka> planszowkiWgLiczbyGraczy(int l);
+    LiveData<List<Planszowka>>planszowkiWgLiczbyGraczy(int l);
 }
