@@ -25,6 +25,11 @@ public class Planszowka {
         this.trudnosc = trudnosc;
     }
 
+    @Override
+    public String toString() {
+        return nazwa;
+    }
+
     public int getId() {
         return id;
     }
