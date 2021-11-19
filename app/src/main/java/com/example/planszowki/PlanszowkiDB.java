@@ -20,7 +20,7 @@ public abstract class PlanszowkiDB extends RoomDatabase {
     private static volatile PlanszowkiDB instancja;
 
     public static final ExecutorService databaseWriterExecutor
-            = Executors.newFixedThreadPool(4);
+            = Executors.newFixedThreadPool(2);
 
     public static PlanszowkiDB pobierzDB(final Context context){
         if(instancja == null){

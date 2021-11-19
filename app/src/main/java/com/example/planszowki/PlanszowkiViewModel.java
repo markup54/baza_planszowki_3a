@@ -1,6 +1,7 @@
 package com.example.planszowki;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -25,6 +26,10 @@ public class PlanszowkiViewModel extends AndroidViewModel {
 
     public void wstawPlanszowke(Planszowka planszowka){
         planszowkiRepository.wstawPlanszowki(planszowka);
+    }
+
+    public void usunPlanszowke(){
+        planszowkiRepository.usunWszystkiePlanszowki();
     }
 
 }

@@ -14,6 +14,9 @@ public interface PlanszowkaDao {
     @Delete
     void usunPlanszowki(List<Planszowka> gry);
 
+    @Query("DELETE FROM planszowki")
+    void usunWszystko();
+
     @Insert
     void wstawPlanszowke(Planszowka gra);
 

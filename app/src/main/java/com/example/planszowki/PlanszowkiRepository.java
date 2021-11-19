@@ -26,9 +26,10 @@ public class PlanszowkiRepository {
             planszowkaDao.wstawPlanszowke(planszowka);
         });
     }
-    void usunWszystkiePlanszowki(List<Planszowka> gry){
+
+    void usunWszystkiePlanszowki(){
         PlanszowkiDB.databaseWriterExecutor.execute(()->{
-            planszowkaDao.usunPlanszowki(gry);
+            planszowkaDao.usunWszystko();
         });
     }
 }

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     listView.setAdapter(planszowkaArrayAdapter);
                 }
         );
-
+        planszowkiViewModel.usunPlanszowke();
         planszowkiViewModel.wstawPlanszowke(
                 new Planszowka("Monopoly",
                         2,
